@@ -29,33 +29,33 @@ proxies:
 - name: vless-reality-vision-jph1-20250725152644b76eb0               
   type: vless
   server: 156.246.92.179                           
-  port: 39538                                
-  uuid: 47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0   
+  port: 37513                                
+  uuid: 05c7f710-4c50-4213-bcad-9ad3dc6007d5   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
   servername: www.yahoo.com                 
   reality-opts: 
-    public-key: KoMqr1CsP0LAG3G11-gpRVhJO3nAdqz_HKbn-P3xmlo    
-    short-id: b3cd7979                    
+    public-key: I6-EoF-yRJyX1agRd8o_5D8fUd4_FS_0jKUQgiXcP3Q    
+    short-id: 08bd71fe                    
   client-fingerprint: chrome                  
 
 - name: vmess-ws-jph1-20250725152644b76eb0                         
   type: vmess
-  server: cf.090227.xyz#三网自适应分流官方优选                        
-  port: 2082                                     
-  uuid: 47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0       
+  server: 156.246.92.179                        
+  port: 2052                                     
+  uuid: 05c7f710-4c50-4213-bcad-9ad3dc6007d5       
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   network: ws
-  servername: 1                    
+  servername: www.bing.com                    
   ws-opts:
-    path: "47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0-vm"                             
+    path: "05c7f710-4c50-4213-bcad-9ad3dc6007d5-vm"                             
     headers:
-      Host: 1                     
+      Host: www.bing.com                     
 
 
 
@@ -64,8 +64,8 @@ proxies:
 - name: hysteria2-jph1-20250725152644b76eb0                            
   type: hysteria2                                      
   server: 156.246.92.179                               
-  port: 45439                                
-  password: 47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0                          
+  port: 21770                                
+  password: 05c7f710-4c50-4213-bcad-9ad3dc6007d5                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -74,10 +74,10 @@ proxies:
 
 - name: tuic5-jph1-20250725152644b76eb0                            
   server: 156.246.92.179                      
-  port: 57632                                    
+  port: 18377                                    
   type: tuic
-  uuid: 47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0       
-  password: 47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0   
+  uuid: 05c7f710-4c50-4213-bcad-9ad3dc6007d5       
+  password: 05c7f710-4c50-4213-bcad-9ad3dc6007d5   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
