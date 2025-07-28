@@ -29,23 +29,23 @@ proxies:
 - name: vless-reality-vision-jph1-20250725152644b76eb0               
   type: vless
   server: 156.246.92.179                           
-  port: 37513                                
-  uuid: 05c7f710-4c50-4213-bcad-9ad3dc6007d5   
+  port: 65119                                
+  uuid: 005ccc62-bc92-4843-8f43-17d42ddf38be   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
   servername: www.yahoo.com                 
   reality-opts: 
-    public-key: I6-EoF-yRJyX1agRd8o_5D8fUd4_FS_0jKUQgiXcP3Q    
-    short-id: 08bd71fe                    
+    public-key: O8NEa0gOiOVt4twIPOIGtcdY9TQiH3Fz8StXm7SvpFE    
+    short-id: 8c8fb382                    
   client-fingerprint: chrome                  
 
 - name: vmess-ws-jph1-20250725152644b76eb0                         
   type: vmess
   server: 156.246.92.179                        
-  port: 2052                                     
-  uuid: 05c7f710-4c50-4213-bcad-9ad3dc6007d5       
+  port: 8080                                     
+  uuid: 005ccc62-bc92-4843-8f43-17d42ddf38be       
   alterId: 0
   cipher: auto
   udp: true
@@ -53,7 +53,7 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "05c7f710-4c50-4213-bcad-9ad3dc6007d5-vm"                             
+    path: "005ccc62-bc92-4843-8f43-17d42ddf38be-vm"                             
     headers:
       Host: www.bing.com                     
 
@@ -64,8 +64,8 @@ proxies:
 - name: hysteria2-jph1-20250725152644b76eb0                            
   type: hysteria2                                      
   server: 156.246.92.179                               
-  port: 21770                                
-  password: 05c7f710-4c50-4213-bcad-9ad3dc6007d5                          
+  port: 58386                                
+  password: 005ccc62-bc92-4843-8f43-17d42ddf38be                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -74,10 +74,10 @@ proxies:
 
 - name: tuic5-jph1-20250725152644b76eb0                            
   server: 156.246.92.179                      
-  port: 18377                                    
+  port: 28318                                    
   type: tuic
-  uuid: 05c7f710-4c50-4213-bcad-9ad3dc6007d5       
-  password: 05c7f710-4c50-4213-bcad-9ad3dc6007d5   
+  uuid: 005ccc62-bc92-4843-8f43-17d42ddf38be       
+  password: 005ccc62-bc92-4843-8f43-17d42ddf38be   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
