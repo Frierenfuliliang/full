@@ -43,7 +43,7 @@ proxies:
 
 - name: vmess-ws-jph1-20250725152644b76eb0                         
   type: vmess
-  server: 156.246.92.179                        
+  server: cf.090227.xyz#三网自适应分流官方优选                        
   port: 2082                                     
   uuid: 47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0       
   alterId: 0
@@ -51,11 +51,11 @@ proxies:
   udp: true
   tls: false
   network: ws
-  servername: www.bing.com                    
+  servername: 1                    
   ws-opts:
     path: "47bd9f1f-1c98-4753-a9ce-d0afbb68b6d0-vm"                             
     headers:
-      Host: www.bing.com                     
+      Host: 1                     
 
 
 
