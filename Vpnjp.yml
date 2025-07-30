@@ -29,23 +29,23 @@ proxies:
 - name: vless-reality-vision-jph1-20250725152644b76eb0               
   type: vless
   server: 156.246.92.179                           
-  port: 65119                                
-  uuid: 005ccc62-bc92-4843-8f43-17d42ddf38be   
+  port: 54288                                
+  uuid: 65cac699-8407-4036-a67d-fda1c42da9d0   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
-  servername: www.yahoo.com                 
+  servername: freelian.xyz                 
   reality-opts: 
-    public-key: O8NEa0gOiOVt4twIPOIGtcdY9TQiH3Fz8StXm7SvpFE    
-    short-id: 8c8fb382                    
+    public-key: u7_58KN3Jydn0CjvhStiH_5I01sjPBLgeD5pwWjqogk    
+    short-id: 93780d85                      
   client-fingerprint: chrome                  
 
 - name: vmess-ws-jph1-20250725152644b76eb0                         
   type: vmess
   server: 156.246.92.179                        
   port: 8080                                     
-  uuid: 005ccc62-bc92-4843-8f43-17d42ddf38be       
+  uuid: 65cac699-8407-4036-a67d-fda1c42da9d0       
   alterId: 0
   cipher: auto
   udp: true
@@ -53,19 +53,15 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "005ccc62-bc92-4843-8f43-17d42ddf38be-vm"                             
+    path: "65cac699-8407-4036-a67d-fda1c42da9d0-vm"                             
     headers:
       Host: www.bing.com                     
-
-
-
-
 
 - name: hysteria2-jph1-20250725152644b76eb0                            
   type: hysteria2                                      
   server: 156.246.92.179                               
-  port: 58386                                
-  password: 005ccc62-bc92-4843-8f43-17d42ddf38be                          
+  port: 46400                                
+  password: 65cac699-8407-4036-a67d-fda1c42da9d0                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -74,10 +70,10 @@ proxies:
 
 - name: tuic5-jph1-20250725152644b76eb0                            
   server: 156.246.92.179                      
-  port: 28318                                    
+  port: 38408                                    
   type: tuic
-  uuid: 005ccc62-bc92-4843-8f43-17d42ddf38be       
-  password: 005ccc62-bc92-4843-8f43-17d42ddf38be   
+  uuid: 65cac699-8407-4036-a67d-fda1c42da9d0       
+  password: 65cac699-8407-4036-a67d-fda1c42da9d0   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
@@ -85,6 +81,44 @@ proxies:
   congestion-controller: bbr
   sni: www.bing.com                                
   skip-cert-verify: true
+
+
+
+
+
+
+
+- name: vmess-tls-argo固定-jph1-20250725152644b76eb0                         
+  type: vmess
+  server: www.visa.com.sg                        
+  port: 8443                                     
+  uuid: 65cac699-8407-4036-a67d-fda1c42da9d0       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  servername: fulilia.freelian.xyz                    
+  ws-opts:
+    path: "65cac699-8407-4036-a67d-fda1c42da9d0-vm"                             
+    headers:
+      Host: fulilia.freelian.xyz
+
+- name: vmess-argo固定-jph1-20250725152644b76eb0                         
+  type: vmess
+  server: www.visa.com.sg                        
+  port: 8880                                     
+  uuid: 65cac699-8407-4036-a67d-fda1c42da9d0       
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  network: ws
+  servername: fulilia.freelian.xyz                    
+  ws-opts:
+    path: "65cac699-8407-4036-a67d-fda1c42da9d0-vm"                             
+    headers:
+      Host: fulilia.freelian.xyz
 
 proxy-groups:
 - name: 负载均衡
@@ -97,6 +131,8 @@ proxy-groups:
     - vmess-ws-jph1-20250725152644b76eb0
     - hysteria2-jph1-20250725152644b76eb0
     - tuic5-jph1-20250725152644b76eb0
+    - vmess-tls-argo固定-jph1-20250725152644b76eb0
+    - vmess-argo固定-jph1-20250725152644b76eb0
 
 - name: 自动选择
   type: url-test
@@ -108,6 +144,8 @@ proxy-groups:
     - vmess-ws-jph1-20250725152644b76eb0
     - hysteria2-jph1-20250725152644b76eb0
     - tuic5-jph1-20250725152644b76eb0
+    - vmess-tls-argo固定-jph1-20250725152644b76eb0
+    - vmess-argo固定-jph1-20250725152644b76eb0
     
 - name: 🌍选择代理节点
   type: select
@@ -119,6 +157,8 @@ proxy-groups:
     - vmess-ws-jph1-20250725152644b76eb0
     - hysteria2-jph1-20250725152644b76eb0
     - tuic5-jph1-20250725152644b76eb0
+    - vmess-tls-argo固定-jph1-20250725152644b76eb0
+    - vmess-argo固定-jph1-20250725152644b76eb0
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
