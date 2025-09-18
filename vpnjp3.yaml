@@ -29,23 +29,23 @@ proxies:
 - name: vless-reality-vision-vm4436339.example.com               
   type: vless
   server: 5.253.41.187                           
-  port: 56661                                
-  uuid: 78a9c049-fea0-4e55-8ff2-796e1a56433e   
+  port: 23097                                
+  uuid: e5bc5cc6-22f0-443e-a12a-a8082639b3bd   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
   servername: www.amd.com                 
   reality-opts: 
-    public-key: l0EIiHOQcAhqU1Gn-HM5JbO5ehZMsx3S24C-LysmL1Y    
-    short-id: 06e31377                    
+    public-key: iBhwuVQ6Ec7RX8e8ACsa8nYn_1If31_UJLEm6kHPXHg    
+    short-id: bb4b496d                    
   client-fingerprint: chrome                  
 
 - name: vmess-ws-vm4436339.example.com                         
   type: vmess
   server: 5.253.41.187                        
-  port: 2082                                     
-  uuid: 78a9c049-fea0-4e55-8ff2-796e1a56433e       
+  port: 8880                                     
+  uuid: e5bc5cc6-22f0-443e-a12a-a8082639b3bd       
   alterId: 0
   cipher: auto
   udp: true
@@ -53,7 +53,7 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "78a9c049-fea0-4e55-8ff2-796e1a56433e-vm"                             
+    path: "e5bc5cc6-22f0-443e-a12a-a8082639b3bd-vm"                             
     headers:
       Host: www.bing.com                     
 
@@ -64,8 +64,8 @@ proxies:
 - name: hysteria2-vm4436339.example.com                            
   type: hysteria2                                      
   server: 5.253.41.187                               
-  port: 31014                                
-  password: 78a9c049-fea0-4e55-8ff2-796e1a56433e                          
+  port: 12711                                
+  password: e5bc5cc6-22f0-443e-a12a-a8082639b3bd                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -74,10 +74,10 @@ proxies:
 
 - name: tuic5-vm4436339.example.com                            
   server: 5.253.41.187                      
-  port: 65422                                    
+  port: 52037                                    
   type: tuic
-  uuid: 78a9c049-fea0-4e55-8ff2-796e1a56433e       
-  password: 78a9c049-fea0-4e55-8ff2-796e1a56433e   
+  uuid: e5bc5cc6-22f0-443e-a12a-a8082639b3bd       
+  password: e5bc5cc6-22f0-443e-a12a-a8082639b3bd   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
