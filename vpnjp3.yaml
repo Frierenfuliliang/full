@@ -29,23 +29,23 @@ proxies:
 - name: vless-reality-vision-vm4436339.example.com               
   type: vless
   server: 5.253.41.187                           
-  port: 23097                                
-  uuid: e5bc5cc6-22f0-443e-a12a-a8082639b3bd   
+  port: 13475                                
+  uuid: dfd9af22-73dd-408e-b31e-2cbd6416c52f   
   network: tcp
   udp: true
   tls: true
   flow: xtls-rprx-vision
   servername: www.amd.com                 
   reality-opts: 
-    public-key: iBhwuVQ6Ec7RX8e8ACsa8nYn_1If31_UJLEm6kHPXHg    
-    short-id: bb4b496d                    
+    public-key: EKWIdPvP3ITPMAyL1OwcxSOivICzGyIOp8JOWti5Dwo    
+    short-id: 8d126c2a                    
   client-fingerprint: chrome                  
 
 - name: vmess-ws-vm4436339.example.com                         
   type: vmess
   server: 5.253.41.187                        
   port: 8880                                     
-  uuid: e5bc5cc6-22f0-443e-a12a-a8082639b3bd       
+  uuid: dfd9af22-73dd-408e-b31e-2cbd6416c52f       
   alterId: 0
   cipher: auto
   udp: true
@@ -53,7 +53,7 @@ proxies:
   network: ws
   servername: www.bing.com                    
   ws-opts:
-    path: "e5bc5cc6-22f0-443e-a12a-a8082639b3bd-vm"                             
+    path: "dfd9af22-73dd-408e-b31e-2cbd6416c52f-vm"                             
     headers:
       Host: www.bing.com                     
 
@@ -64,8 +64,8 @@ proxies:
 - name: hysteria2-vm4436339.example.com                            
   type: hysteria2                                      
   server: 5.253.41.187                               
-  port: 12711                                
-  password: e5bc5cc6-22f0-443e-a12a-a8082639b3bd                          
+  port: 16262                                
+  password: dfd9af22-73dd-408e-b31e-2cbd6416c52f                          
   alpn:
     - h3
   sni: www.bing.com                               
@@ -74,10 +74,10 @@ proxies:
 
 - name: tuic5-vm4436339.example.com                            
   server: 5.253.41.187                      
-  port: 52037                                    
+  port: 34376                                    
   type: tuic
-  uuid: e5bc5cc6-22f0-443e-a12a-a8082639b3bd       
-  password: e5bc5cc6-22f0-443e-a12a-a8082639b3bd   
+  uuid: dfd9af22-73dd-408e-b31e-2cbd6416c52f       
+  password: dfd9af22-73dd-408e-b31e-2cbd6416c52f   
   alpn: [h3]
   disable-sni: true
   reduce-rtt: true
