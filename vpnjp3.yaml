@@ -38,7 +38,7 @@ proxies:
   servername: www.amd.com                 
   reality-opts: 
     public-key: l0EIiHOQcAhqU1Gn-HM5JbO5ehZMsx3S24C-LysmL1Y    
-    short-id: 06e31377                      
+    short-id: 06e31377                    
   client-fingerprint: chrome                  
 
 - name: vmess-ws-vm4436339.example.com                         
@@ -56,6 +56,10 @@ proxies:
     path: "78a9c049-fea0-4e55-8ff2-796e1a56433e-vm"                             
     headers:
       Host: www.bing.com                     
+
+
+
+
 
 - name: hysteria2-vm4436339.example.com                            
   type: hysteria2                                      
@@ -82,44 +86,6 @@ proxies:
   sni: www.bing.com                                
   skip-cert-verify: true
 
-
-
-
-
-
-
-- name: vmess-tls-argo固定-vm4436339.example.com                         
-  type: vmess
-  server: www.visa.com.sg                        
-  port: 8443                                     
-  uuid: 78a9c049-fea0-4e55-8ff2-796e1a56433e       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  network: ws
-  servername: jpjpjp.freelian.xyz                    
-  ws-opts:
-    path: "78a9c049-fea0-4e55-8ff2-796e1a56433e-vm"                             
-    headers:
-      Host: jpjpjp.freelian.xyz
-
-- name: vmess-argo固定-vm4436339.example.com                         
-  type: vmess
-  server: www.visa.com.sg                        
-  port: 8880                                     
-  uuid: 78a9c049-fea0-4e55-8ff2-796e1a56433e       
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  network: ws
-  servername: jpjpjp.freelian.xyz                    
-  ws-opts:
-    path: "78a9c049-fea0-4e55-8ff2-796e1a56433e-vm"                             
-    headers:
-      Host: jpjpjp.freelian.xyz
-
 proxy-groups:
 - name: 负载均衡
   type: load-balance
@@ -131,8 +97,6 @@ proxy-groups:
     - vmess-ws-vm4436339.example.com
     - hysteria2-vm4436339.example.com
     - tuic5-vm4436339.example.com
-    - vmess-tls-argo固定-vm4436339.example.com
-    - vmess-argo固定-vm4436339.example.com
 
 - name: 自动选择
   type: url-test
@@ -144,8 +108,6 @@ proxy-groups:
     - vmess-ws-vm4436339.example.com
     - hysteria2-vm4436339.example.com
     - tuic5-vm4436339.example.com
-    - vmess-tls-argo固定-vm4436339.example.com
-    - vmess-argo固定-vm4436339.example.com
     
 - name: 🌍选择代理节点
   type: select
@@ -157,8 +119,6 @@ proxy-groups:
     - vmess-ws-vm4436339.example.com
     - hysteria2-vm4436339.example.com
     - tuic5-vm4436339.example.com
-    - vmess-tls-argo固定-vm4436339.example.com
-    - vmess-argo固定-vm4436339.example.com
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
